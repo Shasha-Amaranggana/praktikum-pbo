@@ -275,7 +275,7 @@ except ValueError as e:
     print("Status tidak valid   :", e)
 ```
 
-Hasil dari menjalakan kode di atas adalah:
+Hasil dari menjalakan kode di atas adalah: 
 
 ![Gambar 5. Output Pengujian Setter Tidak Valid](Gambar/gambar5.png)
 
