@@ -157,7 +157,7 @@ print(f"Harga Flins setelah diskon 10%: Rp{hargaDiskon}")
 ```
 
 Hasil dari menjalakan kode di atas adalah:
-![Gambar 1. Output Class 'merchandise'](Gambar/Gambar 1'.png)
+![Gambar 1. Output Class 'merchandise'](Gambar/gambar1.png)
 
 
 ### 2. Pengujian Pada Class 'user'
@@ -192,7 +192,7 @@ else:
 ```
 
 Hasil dari menjalakan kode di atas adalah:
-![Gambar 2. Output Class 'user''](Gambar/Gambar 2'.png)
+![Gambar 2. Output Class 'user''](Gambar/gambar2.png)
 
 
 ### 3. Pengujian Class 'pesanan'
@@ -214,7 +214,7 @@ print("Status Pesanan 1 :", pesan1.status)
 ```
 
 Hasil dari menjalakan kode di atas adalah:
-![Gambar 3. Output Class 'pesanan''](Gambar/Gambar 3'.png)
+![Gambar 3. Output Class 'pesanan''](Gambar/gambar3.png)
 
 
 ### 4. Pengujian Setter Valid
@@ -238,7 +238,7 @@ print("Status Pesanan 1 setelah diubah :", pesan1.status)
 ```
 
 Hasil dari menjalakan kode di atas adalah:
-![Gambar 4. Output Pengujian Setter Valid](Gambar/Gambar 4'.png)
+![Gambar 4. Output Pengujian Setter Valid](Gambar/gambar4.png)
 
 
 ### 5. Pengujian Setter Tidak Valid
@@ -272,7 +272,7 @@ except ValueError as e:
 ```
 
 Hasil dari menjalakan kode di atas adalah:
-![Gambar 5. Output Pengujian Setter Tidak Valid](Gambar/Gambar 5'.png)
+![Gambar 5. Output Pengujian Setter Tidak Valid](Gambar/gambar5.png)
 
 
 ### 6. Pengujian Total Seluruh Data Objek
@@ -285,7 +285,7 @@ print("Total User        :", user.totalUser)
 ```
 
 Hasil dari menjalakan kode di atas adalah:
-![Gambar 6. Output Pengujian Total Seluruh Data Objek](Gambar/Gambar 6.png)
+![Gambar 6. Output Pengujian Total Seluruh Data Objek](Gambar/gambar6.png)
 
 ═════════════════════════════════════════════════════════════════════════════════════════════
 
