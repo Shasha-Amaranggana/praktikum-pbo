@@ -31,7 +31,7 @@ class merchandise:
 # CLASS PESANAN
 # ============================
 class pesanan:
-    statusDefault = "Menunggu Pembayaran"
+    statusPesanan = "Menunggu Pembayaran"
     totalPesanan = 0
     daftarPesanan = []
 
@@ -94,7 +94,6 @@ class user:
         self.alamat = alamat
         self.__password = password
         self.__saldo = saldo
-
         user.totalUser += 1
 
     def login(self, username, password):
@@ -137,6 +136,7 @@ class user:
 # ============================
 print("══════════════ 「 DATA MERCHANDISE 」 ══════════════\n")
 
+
 merch1 = merchandise("Flins Acrylic Stand", 150000, 10)
 merch2 = merchandise("Alhaitham Keychain", 20000, 20)
 
@@ -153,37 +153,36 @@ print(f"Harga Flins setelah diskon 10%: Rp{hargaDiskon}")
 
 print("\n\n\n══════════════ 「 DATA USER 」 ══════════════\n")
 
+
 user1 = user("ayak", "12345", "dinda@gmail.com", "Samarinda", 500000)
 user2 = user("shashak", "67890", "shasha@gmail.com", "Balikpapan", 300000)
-print("Username User 1 :", user1.username)
-print("Username User 2 :", user2.username)
-
+print("Username Ayak :", user1.username)
+print("Username Shasha :", user2.username)
 
 print("\n\n 『 INSTANCE METHOD (LOGIN) 』\n")
-print("Login User 1 :", user1.login("ayak", "12345"))
-print("Login User 2 :", user2.login("shashak", "67890"))
+print("Login Ayak :", user1.login("ayak", "12345"))
+print("Login Shasha :", user2.login("shashak", "67890"))
 
 print("\n\n 『 INSTANCE METHOD (PEMBELIAN) 』\n")
 if user1.pembelian(merch1, 2):
-    print("Pembelian User 1 berhasil.")
+    print("Pembelian Ayak berhasil.")
     pesan1 = pesanan(user1, merch1, 2)
-    print("Saldo User 1 :", f"Rp{user1.saldo}")
+    print("Saldo Ayak :", f"Rp{user1.saldo}")
     print("Stok Flins   :", merch1.stok)
 else:
-    print("Pembelian User 1 gagal.")
+    print("Pembelian Ayak gagal.")
 print()
 if user2.pembelian(merch2, 3):
-    print("Pembelian User 2 berhasil.")
+    print("Pembelian Shasha berhasil.")
     pesan2 = pesanan(user2, merch2, 3)
-    print("Saldo User 2 :", f"Rp{user2.saldo}")
+    print("Saldo Shasha :", f"Rp{user2.saldo}")
     print("Stok Alhaitham :", merch2.stok)
 else:
-    print("Pembelian User 2 gagal.")
+    print("Pembelian Shasha gagal.")
 
 
 
 print("\n\n\n══════════════ 「 DATA PESANAN 」 ══════════════\n")
-
 
 
 print(" 『 INSTANCE METHOD (TAMPILKAN PESANAN) 』\n")
@@ -201,16 +200,17 @@ print("Status Pesanan 1 :", pesan1.status)
 
 
 
-print("\n\n\n══════════════ 「 TEST SETTER VALID 」 ══════════════\n")
+print("\n\n\n══════════════ 「 PENGUJIAN SETTER VALID 」 ══════════════\n")
+
 
 merch1.stok = 5
 print("Stok Flins setelah diubah       :", merch1.stok)
 
 user1.saldo = 400000
-print("Saldo User 1 setelah diubah     :", f"Rp{user1.saldo}")
+print("Saldo Ayak setelah diubah       :", f"Rp{user1.saldo}")
 
 user1.password = "54321"
-print("Password User 1 berhasil diubah.")
+print("Password Ayak berhasil diubah.")
 
 pesan1.jumlah = 3
 print("Jumlah Pesanan 1 setelah diubah :", pesan1.jumlah)
@@ -220,7 +220,8 @@ print("Status Pesanan 1 setelah diubah :", pesan1.status)
 
 
 
-print("\n\n\n══════════════ 「 TEST SETTER TIDAK VALID 」 ══════════════\n")
+print("\n\n\n══════════════ 「 PENGUJIAN SETTER TIDAK VALID 」 ══════════════\n")
+
 
 try:
     merch1.stok = -5
@@ -250,6 +251,7 @@ except ValueError as e:
 
 
 print("\n\n\n══════════════ 「 TOTAL MERCH, PESANAN, USER 」 ══════════════\n")
+
 
 print("Total Merchandise :", merchandise.totalMerchandise)
 print("Total Pesanan     :", pesanan.totalPesanan)
