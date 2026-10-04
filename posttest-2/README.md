@@ -196,6 +196,12 @@ Berikut ini adalah diagram UML berdasarkan program tersebut.
 
 ![Gambar 1. Output Class 'merchandise'](Gambar/uml.jpeg)
 
+Dapat dilihat, semua class memiliki relasinya masing-masing.
+1. Relasi antara `user` dan `pesanan` adalah relasi asosiasi, di mana `user` berhubungan dengan `pesanan` miliknya. Jika `user` dihapus, `pesanan` masih akan tetap ada alias berdiri sendiri karena sebagai riwayat pesanan yang masih tercatat.
+2. Relasi antara `pesanan` dan `detailPesanan` adalah relasi komposisi, di mana `pesanan` terdiri dari `detailPesanan` yang berfungsi untuk merinci tiap merchandise yang dibeli pada satu pesanan. Jika `pesanan` dihapus, `detailPesanan` akan menghilang karena ia bergantung penuh pada `pesanan`.
+3. Relasi antara `detailPesanan` dan `merchandise` adalah relasi asosiasi, di mana tiap `detailPesanan` merujuk ke satu `merchandise` yang dipesan dalam satu pesanan. Jika `detailPesanan` dihapus, `merchandise` masih akan tetap ada alias berdiri sendiri karena `merchandise` tidak bergantung pada `detailPesanan`.
+4. Relasi antara `user` dan `keranjang` adalah relasi komposisi, di mana `keranjang` merupakan bagian dari `user`. Jika `user` dihapus, `keranjang` akan menghilang karena ia bergantung penuh pada `user` dan tidak ada gunanya ia tetap ada tapi tidak ada `user` yang memilikinya.
+5. Relasi antara `keranjang` dan `merchandise` adalah relasi agregasi, di mana `keranjang` memiliki `merchandise` yang disimpan user di dalamnya. Jika `keranjang` dihapus, `merchandise` masih akan tetap ada alias berdiri sendiri. Kenapa agregasi karena `keranjang` berfungsi untuk menyimpan merchandise terpilih oleh user (terdiri dari), tetapi ketika `keranjang` dihapus, `merchandise` yang berada di dalamnya tidak akan terhapus.
 
 ════════════════════════════════════════════════════════════════════════════════════════════
 
