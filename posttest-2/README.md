@@ -194,7 +194,7 @@ berkaitan dengan pembelian.
 
 Berikut ini adalah diagram UML berdasarkan program tersebut.
 
-![Gambar 1. Output Class 'merchandise'](Gambar/uml.png)
+![Gambar 1. Output Class 'merchandise'](Gambar/uml.jpeg)
 
 
 ════════════════════════════════════════════════════════════════════════════════════════════
@@ -327,7 +327,7 @@ if keranjang3.tambahKeranjang(merch1, 2):
 if keranjang3.tambahKeranjang(merch2, 1):
     print("Alhaitham Keychain berhasil dimasukkan ke keranjang.")
 
-print("\n\n 『 INSTANCE METHOD (TAMBAH MERCHANDISE) 』\n")
+print("\n\n 『 INSTANCE METHOD (TAMPILKAN MERCHANDISE) 』\n")
 keranjang3.tampilkanKeranjang()
 ```
 
