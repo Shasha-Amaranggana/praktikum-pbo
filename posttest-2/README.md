@@ -194,7 +194,7 @@ berkaitan dengan pembelian.
 
 Berikut ini adalah diagram UML berdasarkan program tersebut.
 
-![Gambar 1. Output Class 'merchandise'](Gambar/uml.jpeg)
+![Gambar 1. Output Class 'merchandise'](Gambar/UML.jpeg)
 
 Dapat dilihat, semua class memiliki relasinya masing-masing.
 1. Relasi antara `user` dan `pesanan` adalah relasi asosiasi, di mana `user` berhubungan dengan `pesanan` miliknya. Jika `user` dihapus, `pesanan` masih akan tetap ada alias berdiri sendiri karena sebagai riwayat pesanan yang masih tercatat.
