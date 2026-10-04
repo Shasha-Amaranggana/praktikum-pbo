@@ -189,6 +189,17 @@ berkaitan dengan pembelian.
 ════════════════════════════════════════════════════════════════════════════════════════════
 
 
+## Diagram UML yang Tercipta
+
+
+Berikut ini adalah diagram UML berdasarkan program tersebut.
+
+![Gambar 1. Output Class 'merchandise'](Gambar/uml.png)
+
+
+════════════════════════════════════════════════════════════════════════════════════════════
+
+
 ## Panduan Menjalankan Program
 
 

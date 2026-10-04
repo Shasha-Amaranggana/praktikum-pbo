@@ -320,7 +320,7 @@ if keranjang3.tambahKeranjang(merch1, 2):
 if keranjang3.tambahKeranjang(merch2, 1):
     print("Alhaitham Keychain berhasil dimasukkan ke keranjang.")
 
-print("\n\n 『 INSTANCE METHOD (TAMBAH MERCHANDISE) 』\n")
+print("\n\n 『 INSTANCE METHOD (TAMPILKAN KERANJANG) 』\n")
 keranjang3.tampilkanKeranjang()
 
 
