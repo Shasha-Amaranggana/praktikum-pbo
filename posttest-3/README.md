@@ -70,7 +70,7 @@ Berfungsi sebagai class dasar sekaligus abstract class (menggunakan `ABC`) untuk
 - `property stok` = Getter, untuk mengambil nilai stok (karena stok di-privat).
 - `stok.setter` = Setter, untuk mengubah stok dengan ketentuan tidak boleh negatif.
 - `__str__()` = Operator overloading, agar objek dapat di-print langsung (menampilkan nama dan harga akhir).
-- `__lt__()` = Operator overloading untuk operator `<`, membandingkan harga akhir sehingga merchandise dapat diurutkan dengan `sorted()`.gatif.
+- `__lt__()` = Operator overloading untuk operator `<`, membandingkan harga akhir sehingga merchandise dapat diurutkan dengan `sorted()`.
 
 ___________________________________________
 
@@ -279,6 +279,7 @@ class merchandise(ABC):
 - **Polimorfisme via pewarisan** = Method `hitungBiayaTambahan()` dan `infoKhusus()` di-override oleh `acrylicStand`, `keychain`, dan `jaket` dengan perilaku berbeda. Keduanya dipanggil lewat satu loop `for merch in daftarMerch` yang berisi objek dari tiga subclass berbeda.
 - **Duck typing** = Class `notifikasiEmail` dan `notifikasiWhatsApp` tidak berhubungan lewat pewarisan, tetapi sama-sama memiliki method `kirim()`. Keduanya dipanggil lewat satu fungsi yang sama, yaitu `beritahuUser()`.
 - **Operator overloading** = `__str__()` dan `__lt__()` pada class `merchandise` (sehingga objek dapat di-print dan diurutkan dengan `sorted()`), serta `__len__()` pada class `keranjang`.
+- **Larangan anti-pattern** = Tidak ada rantai `if` / `elif` yang mengecek `type()` atau string jenis untuk membedakan perilaku objek. 
 
 ════════════════════════════════════════════════════════════════════════════════════════════
 
@@ -588,6 +589,15 @@ except TypeError as e:
 Hasil dari menjalankan kode di atas adalah:
 
 ![Gambar 9. Output Bukti Abstract Class](Gambar/gambarBuktiAbstract.png)
+
+
+### 10. Pengujian Duck Typing
+Duck typing diuji dengan memanggil dua kanal yang tidak berhubungan lewat pewarisan melalui satu fungsi yang sama:
+
+``` python
+kanalAyak = [notifikasiEmail(user1.email), notifikasiWhatsApp("0812-1111-2222")]
+beritahuUser(kanalAyak, "Pesanan Anda sedang diproses.")
+```
 
 
 ════════════════════════════════════════════════════════════════════════════════════════════
